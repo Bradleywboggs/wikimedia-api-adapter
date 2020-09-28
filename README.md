@@ -1,5 +1,5 @@
-#WikiMedia API Adapter
-A REST API Middlelayer which translates Wikimedia API responses to JSON:API specced loveliness.
+# WikiMedia API Adapter
+A REST API Middlelayer which translates Wikimedia API responses to [JSON:API](https://jsonapi.org/) specced loveliness.
 
 This is still **quite** a work in progress.
 What you get right now:
