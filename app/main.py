@@ -13,7 +13,7 @@ async def root():
 # TODO: Add auth middleware
 
 
-@app.get('/births')
+@app.get('/v0/births')
 async def get_births(
         request: Request,
         query_parser=Depends(QueryParser)
