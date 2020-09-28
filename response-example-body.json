@@ -1,0 +1,44 @@
+{
+  "data":  [
+    {
+      "type": "birth",
+      "id": "{yyyymmdd}:{title}",
+      "attributes": {
+        "name": "",
+        "title": "",
+        "shortDescription": "",
+        "description": "",
+        "birthday": {
+          "date": "string",
+          "year": "int",
+          "month": "int",
+          "day":"int"
+        },
+        "thumbnail": {
+          "source": "",
+          "width": "",
+          "height": ""
+        },
+        "originalImage": {
+          "source": "",
+          "width": "",
+          "height": ""
+        }
+      },
+      "links": {
+        "related": {
+          "wikipedia-desktop": "",
+          "wikipedia-mobile": ""
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "https://born-on-this-day-api.thelostbee.com/v0/births?filter[month]=01&filter[day]=01&filter[year][gt]=1950&filter[description][containsAny]=American,United States&page=1",
+    "next": "https://born-on-this-day-api.thelostbee.com/v0/births?filter[month]=01&filter[day]=01&filter[year][gt]=1950&page=2",
+    "previous": null,
+    "per-page": 30,
+    "total": 150
+  },
+  "meta": {}
+}
