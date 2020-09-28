@@ -8,7 +8,13 @@ app = FastAPI()
 
 @app.get('/')
 async def root():
-    return {"api": "wikimedia-adapter", "version": "0.1.1"}
+    return {
+        "api": "wikimedia-api-adapter",
+        "version": "0.1.0",
+        "examples": {
+            "births": "{baseUrl}/v0/births?filter[month]=12&filter[day]=25&page[limit]=30&page[offset]=1"
+        }
+    }
 
 # TODO: Add auth middleware
 

@@ -4,7 +4,7 @@ A REST API Middlelayer which translates Wikimedia API responses to [JSON:API](ht
 This is still **quite** a work in progress.
 What you get right now:
 * JSON:API specified resource with pagination by default (links are still needing some work) 
-    - example call: `api-adapter.epluribusunum.dev/v0/births?filter[month]=12&filter[day]=25&page[limit]=30&page[offset]=3`
+    - example call: `{baseUrl}/v0/births?filter[month]=12&filter[day]=25&page[limit]=30&page[offset]=3`
     - note that due to the nature of the resource the filters are required
     - At this point, only the happy path is functioning, and there's just one endpoint "births".
       use case: "Born on this day"
@@ -115,3 +115,29 @@ WITH the adapter
     },...
 ]
 ```
+## Run the App locally
+From project root:
+```
+docker build -t wm-api-adapter:v0 .
+docker run -dit -p 8081:80 --name my-api-adapter wm-api-adapter:v0
+```
+
+Check that it's running:
+
+from the terminal: `curl localhost:8081`
+
+from your browser: `http://localhost:8081`
+
+you should see a 200 response: 
+```
+{
+        "api": "wikimedia-api-adapter",
+        "version": "0.1.0",
+        "examples": { 
+            "births": "{baseUrl}/v0/births?filter[month]=12&filter[day]=25&page[limit]=30&page[offset]=1" 
+}
+```
+to stop the container:
+`docker stop my-api-adapter`
+
+
